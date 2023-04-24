@@ -1,0 +1,11 @@
+{
+    //passando config de compilação - vai ler de app.ts e gerar em dist.js
+    "compilerOptions": {
+        "outDir": "dist/js", //gera os arquivos na pasta dist
+        "target": "ES6", //converte todo codigo JS em JS na versão do ECMA6
+        "noEmitOnError": true,
+        "noImplicitAny": true
+    },
+    "include": ["app/**/*"] //inclui tudo que está na pág app.ts, converte e joga na pasta dist
+    
+}
