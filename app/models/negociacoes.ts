@@ -1,15 +1,13 @@
-import { Negociacao } from "./negociacao.js";
+import { Negociacao } from './negociacao.js';
 
 export class Negociacoes {
+    private negociacoes: Negociacao[] = [];
 
-    private negociacoes: Negociacao[]; //pode usar Negociacao[] no lugar de Array<Negociacao>, tem o mesmo sentido, lista do tipo array.
-
-    adiciona(negociacao: Negociacao) {
+    public adiciona(negociacao: Negociacao) {
         this.negociacoes.push(negociacao);
     }
 
-    lista(): readonly Negociacao[] {//pode usar readonly no lugar de readonlyArray<t>, passando a lista também abreviada.
+    public lista(): readonly Negociacao[] {
         return this.negociacoes;
-
     }
 }

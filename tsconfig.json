@@ -4,7 +4,10 @@
         "outDir": "dist/js", //gera os arquivos na pasta dist
         "target": "ES6", //converte todo codigo JS em JS na versão do ECMA6
         "noEmitOnError": true,
-        "noImplicitAny": true
+        "noImplicitAny": true,
+        "removeComments": true,
+        "strictNullChecks": false
+
     },
     "include": ["app/**/*"] //inclui tudo que está na pág app.ts, converte e joga na pasta dist
     

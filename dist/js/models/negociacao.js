@@ -8,7 +8,14 @@ export class Negociacao {
         return this.quantidade * this.valor;
     }
     get data() {
-        const data = new Date(this._data.getTime()); //getTime de uma data, ele retorna a data em milisegundos. Ao passar o getTime para o constructor ele sabe e vai passar a data a partir do time de Data(this._data.getTime). Essa data é identica a data que temos encapsuladas em negociação, porem com nova referencia.
+        const data = new Date(this._data.getTime());
         return data;
+    }
+    static criaDe(dataString, quantidadeString, valorString) {
+        const exp = /-/g;
+        const date = new Date(dataString.replace(exp, ','));
+        const quantidade = parseInt(quantidadeString);
+        const valor = parseFloat(valorString);
+        return new Negociacao(date, quantidade, valor);
     }
 }
